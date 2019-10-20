@@ -1,0 +1,28 @@
+{
+  "name": "dy_algorithm",
+  "version": "1.0.0",
+  "description": "for practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dooyeon/dy_algorithm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dooyeon/dy_algorithm/issues"
+  },
+  "homepage": "https://github.com/dooyeon/dy_algorithm#readme",
+  "dependencies": {
+    "app-root-path": "^2.2.1",
+    "async": "^3.1.0",
+    "child_process": "^1.0.2",
+    "fibers": "^4.0.1",
+    "fs": "0.0.1-security",
+    "python-shell": "^1.0.8",
+    "sync-request": "^6.1.0"
+  }
+}
