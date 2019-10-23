@@ -11,9 +11,29 @@ function main() {
     // Scope();
     // hoisting();
     // letConst()
-    closerFnc1();
+    // closerFnc();
+    mpaTest();
 }
  
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+[Javascript] .map
+////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////
+*/
+function mpaTest() {
+    const arr = [0,1,2,3];
+
+    let squaredArr = arr.map(function(element){
+        return element * element;
+    });
+    // 혹은 arrow 함수 가능
+    squaredArr = arr.map(element => element * element);
+
+    console.log(squaredArr); // [ 0, 1, 4, 9 ]
+}
 
 /* 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -181,7 +201,7 @@ function closerFnc() {
 //캡슐화 예제
 function closerFnc1() {
     function student(name, score){
-        var name = name, score = score;
+        // var name = name, score = score;
         return {
           setScore: function(_score){
             score = _score;
@@ -199,8 +219,8 @@ function closerFnc1() {
       
       console.log(lee.getInfo()); // { name: 'sunsin', score: 60 }
       console.log(kim.getInfo()); // { name: 'yusin', score: 75 }
-      console.log(kim.name); // { name: 'yusin', score: 75 }
-      console.log(kim.score); // { name: 'yusin', score: 75 }
+      console.log(kim.score); // undefined
+      console.log(kim.name); // undefined
 }
 
 //싱글톤 예제
@@ -264,11 +284,3 @@ function closerFnc3_2() {
         console.log(arr[j]());
     }
 }
-
-/* 
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-[Javascript] Closer
-////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////
-*/
