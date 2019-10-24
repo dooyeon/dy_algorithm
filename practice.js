@@ -23,7 +23,9 @@ function main() {
 ////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 */
-function mpaTest() {
+//for문은 continue나 break로 반복을 제어할 수 있지만
+// map은 forEach와 마찬가지로 throw(예외)를 발생시키지 않으면 중간에 반복을 종료할 수 없다
+function mapTest() {
     const arr = [0,1,2,3];
 
     let squaredArr = arr.map(function(element){
@@ -31,6 +33,23 @@ function mpaTest() {
     });
     // 혹은 arrow 함수 가능
     squaredArr = arr.map(element => element * element);
+
+    console.log(squaredArr); // [ 0, 1, 4, 9 ]
+}
+
+function mapTest2() {
+    const arr = [0,1,2,3];
+
+    let squaredArr = arr.map(function(element, index, array){
+        console.log(`${array}의 ${index}번째 인자 : ${element}`);
+        return element * element;
+    });
+    /*
+    0,1,2,3의 0번째 인자 : 0
+    0,1,2,3의 1번째 인자 : 1
+    0,1,2,3의 2번째 인자 : 2
+    0,1,2,3의 3번째 인자 : 3
+    */
 
     console.log(squaredArr); // [ 0, 1, 4, 9 ]
 }
