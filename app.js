@@ -11,115 +11,12 @@ sync.fiber(function()
         // q5();
         // q6();
         // b2();
-        // test1();
-        test2();
         console.log("end");
     } catch(e) {
         console.log(e);
     } 
 })
 
-var MAX_CACHE_SIZE = 100000 ;
-var Cache = Array( MAX_CACHE_SIZE );
-
-function get_recursive(n)
-{
-	if ( n == 1 ) return 1;
-	else if ( n < MAX_CACHE_SIZE )
-	{
-		if ( !Cache[ n ] || Cache[ n ] == 0 )
-		{
-			if ( n % 2 == 0 )
-				Cache[ n ] = get_recursive( n / 2 ) + 1 ;
-			else
-				Cache[ n ] = get_recursive( n + (n+1) / 2 ) + 2 ;
-		}
-		return Cache[ n ] ;
-	}
-	else
-	{
-		if ( n % 2 == 0 )
-			return get_recursive( n / 2 ) + 1 ;
-		else
-			return get_recursive( n + ( n + 1) / 2 ) + 2 ;
-	}
-}
-
-function test2()
-{
-
-	var obj = {
-        "0": "1 22",
-        "1": "1 10",
-        "2": "100 200",
-        "3": "201 210",
-        "4": "900 1000"
-    };
-
-    for( let key in obj ) 
-	{
-		var line = '';
-		try {
-            line = obj[key].split(' ');
-		}
-		catch
-		{
-			break;
-        }
-
-		var n1 = parseInt(line[0]), n2 = parseInt(line[1]);
-		var s = n1 < n2 ? n1 : n2 ;
-		var e = n1 < n2 ? n2 : n1 ;
-		var max = 0;
-		
-		for ( var i = s ; i <= e ; i ++ )
-		{
-			var t = get_recursive(i);
-			if ( t > max ) max = t;
-		}
-		console.log(n1 + " " + n2 + " " + max );
-	}
-}
-
-function test1() {
-    var obj = {
-        "0": "1 22",
-        "0": "1 10",
-        "1": "100 200",
-        "2": "201 210",
-        "3": "900 1000"
-    };
-
-    for( let key in obj ) 
-	{
-		var line = '';
-		try {
-            line = obj[key].split(' ');
-		}
-		catch
-		{
-			break;
-        }
-        
-        let n1 = parseInt(line[0]), n2 = parseInt(line[1]);
-		let s = n1 < n2 ? n1 : n2 ;
-        let e = n1 < n2 ? n2 : n1 ;
-        let cnt=0;
-        for (let k=e; s<=k; ) {
-            cnt++;
-            k=test1_1(k);
-        }
-        console.log(n1 + " " + n2 + " " + cnt );
-    }
-
-}
-
-function test1_1(value) {
-
-    if (value == 1) return -1;
-    value = (value%2 != 0) ? (3*value) +1 : value/2;
-    return value;
-}
 
 function b3() {
     obj = {
