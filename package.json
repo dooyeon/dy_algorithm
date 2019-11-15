@@ -20,6 +20,7 @@
     "app-root-path": "^2.2.1",
     "async": "^3.1.0",
     "child_process": "^1.0.2",
+    "elasticsearch": "^16.5.0",
     "fibers": "^4.0.1",
     "fs": "0.0.1-security",
     "python-shell": "^1.0.8",
