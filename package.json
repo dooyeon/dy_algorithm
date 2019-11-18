@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/dooyeon/dy_algorithm#readme",
   "dependencies": {
+    "apollo-server-express": "^2.9.9",
     "app-root-path": "^2.2.1",
     "async": "^3.1.0",
     "child_process": "^1.0.2",
@@ -24,6 +25,12 @@
     "fibers": "^4.0.1",
     "fs": "0.0.1-security",
     "python-shell": "^1.0.8",
-    "sync-request": "^6.1.0"
+    "sync-request": "^6.1.0",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^3.1.1",
+    "notarealdb": "^0.2.2"
   }
 }
