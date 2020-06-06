@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/dooyeon/dy_algorithm#readme",
   "dependencies": {
-    "apollo-server-express": "^1.4.0",
+    "apollo-server-express": "^2.14.2",
     "app-root-path": "^2.2.1",
     "async": "^3.1.0",
     "body-parser": "^1.18.3",
