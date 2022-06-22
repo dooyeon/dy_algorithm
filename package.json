@@ -19,7 +19,7 @@
   "dependencies": {
     "apollo-server-express": "^1.4.0",
     "app-root-path": "^2.2.1",
-    "async": "^3.1.0",
+    "async": "^3.2.2",
     "body-parser": "^1.18.3",
     "child_process": "^1.0.2",
     "cors": "^2.8.4",
